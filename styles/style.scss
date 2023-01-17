@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGray: hsl(0, 0%, 59%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: $darkGray;
+  background-color: $darkCyan;
+  background-image: url('../assets/bg-pattern-top.svg'), url('../assets/bg-pattern-bottom.svg');
+  background-position: right 72vw bottom 35vh, left 64vw top 52vh;
+  background-repeat: no-repeat no-repeat;
+
+  .main {
+    display: grid;
+    align-items: center;
+
+    height: 100vh;
+
+    .container {
+      background-color: $white;
+      max-width: 350px;
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 28px;
+
+      .bg-pattern-card {
+        height: 150px;
+        width: 100%;
+        background-image: url('../assets/bg-pattern-card.svg');
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+      }
+
+      .user-info {
+        text-align: center;
+        margin-bottom: 26px;
+
+        .user-profile-image {
+          border-radius: 100%;
+          position: relative;
+          bottom: 50px;
+          padding: 6px;
+          background-color: $white;
+          margin-bottom: -50px;
+        }
+
+        .name-info {
+          margin: 12px 0;
+
+          .user-name {
+            font-size: 18px;
+            color: $veryDarkDesaturatedBlue;
+          }
+        }
+      }
+
+      .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 26px;
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 1.5;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .number {
+            font-size: 18px;
+            color: $veryDarkDesaturatedBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 350px) {
+  body {
+    .main {
+      .container {
+        .stats {
+          flex-direction: row;
+
+          .row {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

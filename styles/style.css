@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #969696;
+  background-color: #19a2ae;
+  background-image: url("../assets/bg-pattern-top.svg"), url("../assets/bg-pattern-bottom.svg");
+  background-position: right 72vw bottom 35vh, left 64vw top 52vh;
+  background-repeat: no-repeat no-repeat; }
+  body .main {
+    display: grid;
+    align-items: center;
+    height: 100vh; }
+    body .main .container {
+      background-color: white;
+      max-width: 350px;
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 28px; }
+      body .main .container .bg-pattern-card {
+        height: 150px;
+        width: 100%;
+        background-image: url("../assets/bg-pattern-card.svg");
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px; }
+      body .main .container .user-info {
+        text-align: center;
+        margin-bottom: 26px; }
+        body .main .container .user-info .user-profile-image {
+          border-radius: 100%;
+          position: relative;
+          bottom: 50px;
+          padding: 6px;
+          background-color: white;
+          margin-bottom: -50px; }
+        body .main .container .user-info .name-info {
+          margin: 12px 0; }
+          body .main .container .user-info .name-info .user-name {
+            font-size: 18px;
+            color: #2d3248; }
+      body .main .container .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 26px; }
+        body .main .container .stats .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 1.5;
+          margin-bottom: 16px; }
+          body .main .container .stats .row:last-child {
+            margin-bottom: 0; }
+          body .main .container .stats .row .number {
+            font-size: 18px;
+            color: #2d3248; }
+
+@media (min-width: 350px) {
+  body .main .container .stats {
+    flex-direction: row; }
+    body .main .container .stats .row {
+      margin-bottom: 0; } }
